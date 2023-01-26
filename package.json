@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akshayadme/habit-tracker-app.git"
+    "url": "git+https://github.com/akshayadme/csv-upload.git"
   },
   "author": "Akshay Adme",
   "license": "ISC",
