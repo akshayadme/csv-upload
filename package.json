@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/akshayadme/habit-tracker-app.git"
   },
   "author": "Akshay Adme",
   "license": "ISC",

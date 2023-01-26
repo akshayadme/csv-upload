@@ -20,7 +20,7 @@
 
 ##### First Clone the Repository
 
-`git clone `
+`git clone https://github.com/akshayadme/habit-tracker-app.git`
 
 ##### Move to the project directory
 
