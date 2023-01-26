@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#edede9 ;
+}
+
+.flash-message {
+    width:70%;
+    margin:  20px auto 0;
+
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+
+}
+.upload-section{
+    margin-top: 50px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.upload-section h2{
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Lora', serif;
+}
+
+.upload-section .upload-btn{
+    padding: 10px 30px;
+    border: none;
+    background-color: #21a0a0;
+    color:#fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 200px;
+} 
+
+.upload-section .upload-btn:hover{
+    background-color: #228989;
+    cursor: pointer;
+}
+
+.upload-section .submit-btn button{
+    padding: 10px 30px;
+    border: none;
+    background-color: #9d4edd;
+    color:#fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100px;
+} 
+
+.upload-section .submit-btn button:hover{
+    background-color: #7b2cbf;
+    cursor: pointer;
+}
+
+
+
+.csv-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.csv-list h2{
+    font-size: 1.5em;
+    font-family: 'Lora', serif;
+}
+.csv-list table {
+   
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 30px;
+  }
+
+  .csv-list th{
+    font-size: 1.2rem;
+  }
+  
+  .csv-list  td, th {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .csv-list tr:nth-child(even) {
+    background-color: #e0dddd;
+  }
+
+  .back-btn{
+    margin: 50px;
+  }
+
+  .back-btn a{
+    color: #2176ff;
+    text-decoration: none;
+    color: #2176ff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .input-field{
+    padding: 5px 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+    outline:none;
+  }
+
+  .table{
+    width:70% !important;
+    overflow: auto;
+  }
+
+
+  .table-sortable th {
+    cursor:pointer;
+  }
+
+  .table-sortable .th-sort-asc::after{
+    content: "\25b4";
+
+  }
+
+  .table-sortable .th-sort-desc::after{
+    content: "\25be";
+    
+  }
+
+  
+  .table-sortable .th-sort-asc::after,
+  .table-sortable .th-sort-desc::after{
+    margin-left: 5px;
+  }
+
+  .table-sortable .th-sort-asc,
+  .table-sortable .th-sort-desc{
+    background-color: rgba(0,0,0,0.1);
+  }

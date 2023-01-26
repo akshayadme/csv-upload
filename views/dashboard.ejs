@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <!-- Upload file section -->
+  <div class="upload-section">
+    <h2>Upload CSV File</h2>
+    <form enctype="multipart/form-data" id="submit-btn">
+      <input
+        id="input-file"
+        class="upload-btn"
+        accept=".csv"
+        required=""
+        type="file"
+      />
+
+      <div class="submit-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="flash-message"><%- include ("./partials/flash_message") %></div>
+
+<div class="csv-list">
+  <h2>Files List</h2>
+
+  <!-- Render CSV files list -->
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 10%">Sr.no</th>
+        <th style="width: 70%">File Name</th>
+        <th style="width: 20%">File Size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% files.forEach((file)=> { %>
+      <tr>
+        <td>1</td>
+        <td>
+          <a href="/fetch-data?id=<%= file._id %>"><%= file.filename %> </a>
+        </td>
+        <td><%= file.file_size %>kb</td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

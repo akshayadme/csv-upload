@@ -1,0 +1,51 @@
+<div class="back-btn">
+  <a href="/"> <i class="fas fa-chevron-left"></i> &nbsp; Back to Home </a>
+</div>
+
+<!-- Render CSV data in table -->
+<div class="csv-list">
+  <h2>File Data</h2>
+  <input
+    type="text"
+    class="input-field"
+    id="myInput"
+    onkeyup="searchData()"
+    placeholder="Search Data..."
+  />
+  <table class="table table-sortable" id="table" style="width: 50%">
+    <thead>
+      <tr class="table-head" id="table-head"></tr>
+    </thead>
+    <tbody id="table-data">
+      <!-- added javascript to render table data -->
+      <script>
+        const stringTableHead = `<%- JSON.stringify(files.headers) %>`;
+        const tableHead = JSON.parse(stringTableHead) || [];
+
+        const tableHeadElem = document.querySelector("#table-head");
+
+        tableHead.map((el) => {
+          tableHeadElem.innerHTML += `
+          <th>${el}</th>
+          `;
+        });
+
+        const stringTableData = `<%- JSON.stringify(files.file_data) %>`;
+        const tableData = JSON.parse(stringTableData) || [];
+
+        const tableBody = document.querySelector("#table-data");
+
+        tableData.forEach((el) => {
+          tableBody.innerHTML += `<tr>`;
+          let tableRow = "";
+
+          for (const item in el) {
+            tableRow += `<td>${el[item]}</td>`;
+          }
+
+          tableBody.innerHTML += `${tableRow}</tr>`;
+        });
+      </script>
+    </tbody>
+  </table>
+</div>
